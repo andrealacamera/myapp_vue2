@@ -46,7 +46,7 @@ const actions = {
 
     commit('updTodo', response.data); //we can use the same name for actions and mutations, but here we used two different names for sake of clarity
 
-    console.log(response.data);
+    // console.log(response.data);
   }
 };
 

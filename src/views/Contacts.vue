@@ -1,7 +1,7 @@
 <template>
   <div class="contatti">
     <h1> Contacts</h1>
-    <p> Info: </p>
+    <p> </p>
   </div>
 </template>
 

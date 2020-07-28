@@ -6,7 +6,8 @@ Based on [this video](https://www.youtube.com/watch?v=5lVQgZzLMHc).
 
 ## Notes:
 - The main app is in the Home page
-- When you change pages, by using the menu, the main component is detroyed. Returning in the Home page will crete a new component. Since the data are fake (in this example a jsonplaceholder todos list is used), every change will be removed. 
+- When you change pages, by using the menu, the main component is detroyed. Returning to the Home page will crete a new component. Since the data are fake (in this example a jsonplaceholder todos list is used), every modification will be reset. 
+- Thanks to Navigation Guards, a confirm message is fired. 
 - About and Contacts are not very useful, in this example I focused on the Vuex part within the Homepage. 
 - I'm still learning...
 
