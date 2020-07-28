@@ -10,18 +10,7 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home,
-    beforeRouteLeave (to, from, next) {
-      console.log(to,from);
-      // called when the route that renders this component is about to
-      // be navigated away from.
-      // has access to `this` component instance.
-      // if (confirm("message")) {
-      //   next({name: 'Home'})
-      // }
-      // else 
-      //   next();
-    }
+    component: Home
   },
   {
     path: '/about',
@@ -32,10 +21,10 @@ Vue.use(VueRouter)
     component: () => import('../views/About.vue')
   },
   {
-    path: '/contacts',
-    name: 'Contacts',
+    path: '/sample',
+    name: 'Sample',
     // component: Contacts
-    component: () => import('../views/Contacts.vue')
+    component: () => import('../views/Sample.vue')
   }
 ]
 
@@ -43,14 +32,15 @@ const router = new VueRouter({
   routes
 });
 
-// router.beforeEach((to, from, next) => {
-//   console.log(from.name);
+router.beforeEach((to, from, next) => {
+  console.log(from.name);
 
-//   if (from.name == 'Home') {
-//     console.log("HOME!");
-//     next({name: 'Home'});
-//   } else 
-//   next();
-// });
+  if (from.name == 'Home' && !confirm("Leave the page?")) {
+    console.log("HOME!");
+    next({name: 'Home'});
+  }
+  else 
+  next();
+});
 
 export default router
