@@ -19,8 +19,8 @@
         <input v-model="message" name="new" placeholder="Insert new message..." type="text" class="message form-control" width="50px"></p> 
         
         <div class="d-flex justify-content-between">
-          <button class="btn btn-primary"  @click="setnewmess">Salva</button>
-          <button class="btn btn-primary" @click="getnewmess">Richiama</button>
+          <button class="btn btn-primary"  @click="setnewmess">Save message</button>
+          <button class="btn btn-primary" @click="getnewmess">Load message</button>
         </div>
       </div>
     </main>
